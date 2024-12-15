@@ -107,7 +107,7 @@ def test_case89pegase():
     net = pn.case89pegase()
     pp.runpp(net)
     assert net.converged
-    _ppc_element_test(net, 89, 210, 12+6, 12)
+    _ppc_element_test(net, 89, 210, 12 + 6, 12)
 
 
 def test_case118():
@@ -121,7 +121,7 @@ def test_case145():
     net = pn.case145()
     pp.runpp(net)
     assert net.converged
-    _ppc_element_test(net, 145, 453, 50+9, 50)
+    _ppc_element_test(net, 145, 453, 50 + 9, 50)
 
 
 def test_case_illinois200():
@@ -135,14 +135,14 @@ def test_case300():
     net = pn.case300()
     pp.runpp(net)
     assert net.converged
-    _ppc_element_test(net, 300, 411, 69+8, 69)
+    _ppc_element_test(net, 300, 411, 69 + 8, 69)
 
 
 def test_case1354pegase():
     net = pn.case1354pegase()
     pp.runpp(net)
     assert net.converged
-    _ppc_element_test(net, 1354, 1991, 260+52, 260)
+    _ppc_element_test(net, 1354, 1991, 260 + 52, 260)
 
 
 def test_case1888rte():
@@ -162,7 +162,7 @@ def test_case1888rte_changed_slack():
 
     ref_bus_idx = [1233, 1854]
     net = pn.case1888rte(ref_bus_idx=ref_bus_idx)
-    pp.runpp(net, trafo_model='pi')
+    pp.runpp(net, trafo_model="pi")
     assert list(net.ext_grid.bus.sort_values()) == ref_bus_idx
     assert net.converged
 
@@ -227,7 +227,7 @@ def test_GBnetwork():
     net = pn.GBnetwork()
     pp.runpp(net)
     assert net.converged
-    _ppc_element_test(net, 2224, 3207, 394+37, 394)
+    _ppc_element_test(net, 2224, 3207, 394 + 37, 394)
 
 
 def test_iceland():
@@ -237,5 +237,5 @@ def test_iceland():
     _ppc_element_test(net, 189, 206, 35, True)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     pytest.main([__file__, "-xs"])

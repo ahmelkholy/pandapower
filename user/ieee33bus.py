@@ -5,8 +5,8 @@ import pandapower.networks as pn
 net = pn.case33bw()
 pp.runpp(net, trafo_mode="pi")
 
-# # Print the bus results
+# Print the bus results
 print(net.res_bus)
 
-# # Print the line results
+# Print the line results
 print(net.res_line)
