@@ -1,7 +1,6 @@
 *.pyc
 *~
 build/
-user/
 .pytest_cache/
 dist/
 .cache/
